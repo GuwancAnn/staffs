@@ -30,11 +30,10 @@ const SignUp = () => {
         alert("Bu Email agza bolunan Içeri giriň");
       } else {
         navigate("/emps");
+        console.log(data);
+
+        console.log(error);
       }
-
-      console.log(data);
-
-      console.log(error);
     } catch (error) {
       alert("error");
       console.log(error);
