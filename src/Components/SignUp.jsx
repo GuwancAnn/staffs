@@ -28,7 +28,8 @@ const SignUp = () => {
       });
       if (data.session === null) {
         alert("Bu Email agza bolunan Içeri giriň");
-      } else {
+      }
+      if (data.session !== null) {
         navigate("/emps");
         console.log(data);
 

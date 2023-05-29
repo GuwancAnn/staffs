@@ -149,13 +149,13 @@ td {
   width: 10%;
   background-color: #eeeeee;
 }
-.delete-btn {
+.delete-btn-icon {
   background-color: transparent;
   border: 1px solid transparent;
   margin-right: 15px;
   padding-top: 2px;
 }
-.delete-btn:hover {
+.delete-btn-icon:hover {
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid #72be3d !important;
@@ -203,7 +203,34 @@ td {
   background-color: #2e9b4b;
   border-radius: 35px;
 }
+.delete-btn {
+  height: 36px;
+  width: 132px;
+  border-radius: 35px;
+  font-size: 14px;
+  font-weight: bolder;
+  background: rgb(199, 27, 27);
 
+  color: white;
+  border: none;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  background-color: #c21734;
+  border-radius: 35px;
+}
+.delete-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.delete-text {
+  font-size: 16px;
+}
+.free {
+  width: 50%;
+}
 .new-emp-btn {
   height: 50px;
   width: 180px;
