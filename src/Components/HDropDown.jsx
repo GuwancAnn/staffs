@@ -1,6 +1,5 @@
-import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
-import { useState } from "react";
+
 import "./style.css";
 import supabase from "./client";
 const Hdrop = ({ professions, setstaffs, staffs }) => {

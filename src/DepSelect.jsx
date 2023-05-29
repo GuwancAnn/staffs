@@ -70,7 +70,7 @@ const DepSelect = ({ setNewDepId }) => {
       style={{
         width: "54%",
       }}
-      placeholder="Kafedra saylan"
+      placeholder="Kafedra saýlaň"
       dropdownRender={(menu) => (
         <>
           {menu}

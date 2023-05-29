@@ -5,7 +5,7 @@ import EmpTable from "./EmpTable";
 import "../style.css";
 import DataPicker from "./Datapicker";
 import supabase from "./client";
-import AddEmp from "../AddEmp";
+
 import { useNavigate } from "react-router-dom";
 
 export default function Employes() {

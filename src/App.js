@@ -1,5 +1,5 @@
-import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { Link, Route, Routes } from "react-router-dom";
 import SignIn from "./Components/SignIn";
 import SignUp from "./Components/SignUp";
 import supabase from "./Components/client";

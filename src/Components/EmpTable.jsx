@@ -4,8 +4,11 @@ import EditModal from "./EditModal";
 import "./style.css";
 import dayjs from "dayjs";
 import { Tooltip } from "antd";
-
+import duration from "dayjs/plugin/duration";
+import relativeTime from "dayjs/plugin/relativeTime";
 import supabase from "./client";
+dayjs.extend(duration);
+dayjs.extend(relativeTime);
 function EmpTable({
   staffs,
   setstaffs,
@@ -15,6 +18,7 @@ function EmpTable({
 }) {
   console.log(staffs);
   const navigate = useNavigate();
+
   let today = new Date();
 
   let Currentdate =
@@ -38,9 +42,6 @@ function EmpTable({
         <Table striped bordered hover>
           <thead>
             <tr className="tb-header">
-              {/* <th className="tb-head-item-num">
-            <p className="center-title-item setting">T/B</p>
-          </th> */}
               <th className="tb-head-item-name">
                 <p className="center-title-item setting">Ady familiyasy</p>
               </th>
@@ -51,7 +52,7 @@ function EmpTable({
               </th>
               <th className="tb-head-item ">
                 {" "}
-                <p className="archive-text setting">Ise Baslan Senesi</p>
+                <p className="archive-text setting">Işe Başlan Senesi</p>
               </th>
               <th className="center-title-item-edit setting"></th>
             </tr>
@@ -59,13 +60,11 @@ function EmpTable({
           <tbody>
             {staffs.map((item) => {
               const date1 = dayjs(Currentdate);
-              const dateBtw = date1.diff(item.started_day, "day");
-              const dateBtwMonth = date1.diff(item.started_day, "month");
-              const dateBtwYear = date1.diff(item.started_day, "year");
-              const dateBwFull =
-                dateBtw + " gun " + dateBtwMonth + " ay " + dateBtwYear;
-
-              console.log(staffs);
+              // const dateBtw = date1.diff(item.started_day, "day");
+              const dateBtwS = dayjs.duration(dayjs().diff(item.started_day));
+              const dateBtwStart = `${dateBtwS.years()} yyl ${dateBtwS.months()} ay ${dateBtwS.days()} gun`;
+              const dateBtwB = dayjs.duration(dayjs().diff(item.birthday));
+              const dateBtwBirthday = `${dateBtwB.years()} yyl ${dateBtwB.months()} ay ${dateBtwB.days()} gun`;
               return (
                 <tr key={item.id} className="tb-tr">
                   <td>
@@ -77,13 +76,13 @@ function EmpTable({
 
                   <td>{item.professions.title} </td>
                   <td>
-                    <p>{item.birthday}</p>
+                    <Tooltip title={dateBtwBirthday}>
+                      <p>{item.birthday}</p>
+                    </Tooltip>
                   </td>
                   <td>
                     <p>
-                      <Tooltip title={dateBwFull + " yyl "}>
-                        {item.started_day}
-                      </Tooltip>
+                      <Tooltip title={dateBtwStart}>{item.started_day}</Tooltip>
                     </p>
                   </td>
                   <td>

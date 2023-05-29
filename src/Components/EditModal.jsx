@@ -232,7 +232,7 @@ const EditModal = ({
               </div>
               <div className="Ad-text">
                 <div className="ad-text-item">
-                  <p className="ad-title">Ady Familiyasy</p>
+                  <p className="ad-title">Ady Familiýasy</p>
                   <input
                     type="text"
                     // {...register:"name",{value:"name"}}
@@ -241,7 +241,7 @@ const EditModal = ({
                   />
                 </div>
                 <div className="ad-text-item">
-                  <p className="ad-title">Isleyan yeri</p>
+                  <p className="ad-title">Işleyän ýeri</p>
                   <textarea
                     className="text-area"
                     {...register("working_for", { value: work })}
@@ -268,7 +268,7 @@ const EditModal = ({
                   {console.log(profession, item.professions_id)}
                 </div>
                 <div className="ad-text-item">
-                  <p className="ad-title">Isleyan bolumi</p>
+                  <p className="ad-title">Işleyän bölümi</p>
 
                   <Select
                     labelInValue
@@ -430,7 +430,7 @@ const EditModal = ({
                   />
                 </div>{" "}
                 <div className="ad-text-item">
-                  <p className="ad-title">Haysy dasary yurt dilleri bilyar</p>
+                  <p className="ad-title">Haysy daşary ýurt dilleri bilýär</p>
 
                   <input
                     type="text"
@@ -439,7 +439,7 @@ const EditModal = ({
                   />
                 </div>{" "}
                 <div className="ad-text-item">
-                  <p className="ad-title">Hokumet sylaglary</p>
+                  <p className="ad-title">Hökümet sylaglary</p>
                   <input
                     type="text"
                     className="ad-input"
@@ -447,7 +447,7 @@ const EditModal = ({
                   />
                 </div>{" "}
                 <div className="ad-text-item">
-                  <p className="ad-title">Dasary yurtda bolmagy</p>
+                  <p className="ad-title">Daşary ýurtda bolmagy</p>
                   <input
                     type="text"
                     className="ad-input"
@@ -456,7 +456,7 @@ const EditModal = ({
                 </div>{" "}
                 <div className="ad-text-item">
                   <p className="ad-title">
-                    Turkmenistanyn Mejlisinin deputatymy:
+                    Türkmenistanyň Mejlisiniň deputatymy:
                   </p>
                   <input
                     type="text"

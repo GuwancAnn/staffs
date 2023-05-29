@@ -68,7 +68,7 @@ const ProSelect = ({ setNewProID }) => {
       style={{
         width: "54%",
       }}
-      placeholder="Wezipe saylan"
+      placeholder="Wezipe saýlaň"
       dropdownRender={(menu) => (
         <>
           {menu}

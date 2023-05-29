@@ -26,8 +26,12 @@ const SignUp = () => {
         email: fromData.email,
         password: fromData.password,
       });
-      // alert("logined");
-      navigate("/emps");
+      if (data.session === null) {
+        alert("Bu Email agza bolunan Içeri giriň");
+      } else {
+        navigate("/emps");
+      }
+
       console.log(data);
 
       console.log(error);

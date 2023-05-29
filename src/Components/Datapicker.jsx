@@ -1,7 +1,7 @@
 import React from "react";
 import { DatePicker, Space } from "antd";
 import supabase from "./client";
-import { useState } from "react";
+
 const DataPicker = ({ staffs, setstaffs }) => {
   // const [filteredDate, setfilteredDate] = useState();
   const onChange = async (date, dateString) => {
@@ -189,7 +189,7 @@ const DataPicker = ({ staffs, setstaffs }) => {
             />
           </svg>
         }
-        placeholder="Ise baslan sene"
+        placeholder="Işe başlan sene"
       />
     </div>
   );

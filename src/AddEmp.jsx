@@ -109,18 +109,18 @@ export default function AddEmp() {
             {profile ? (
               <img src={profile} className="photo-upload" />
             ) : (
-              <p className="img-add-text">Surat Saylan</p>
+              <p className="img-add-text">Surat Saýlan</p>
             )}
           </label>
         </div>
 
         <div className="Ad-text">
           <div className="ad-text-item">
-            <label className="ad-title">Ady Familiyasy</label>
+            <label className="ad-title">Ady Familiýasy</label>
             <input type="text" className="ad-input" {...register("name")} />
           </div>
           <div className="ad-text-item">
-            <p className="ad-title">Isleyan yeri</p>
+            <p className="ad-title">Işleyän ýeri</p>
             <textarea
               className="text-area"
               {...register("working_for")}
@@ -132,7 +132,7 @@ export default function AddEmp() {
             <ProSelect setNewProID={setNewProID}></ProSelect>
           </div>
           <div className="ad-text-item">
-            <p className="ad-title">Isleyan bolumi</p>
+            <p className="ad-title">Işleýän bölümi</p>
 
             <DepSelect setNewDepId={setNewDepId}></DepSelect>
           </div>{" "}
@@ -277,7 +277,7 @@ export default function AddEmp() {
             />
           </div>{" "}
           <div className="ad-text-item">
-            <p className="ad-title">Haysy dasary yurt dilleri bilyar</p>
+            <p className="ad-title">Haýsy daşary ýurt dilleri bilyär</p>
             <input
               type="text"
               {...register("languages")}
@@ -285,7 +285,7 @@ export default function AddEmp() {
             />
           </div>{" "}
           <div className="ad-text-item">
-            <label className="ad-title">Hokumet sylaglary</label>
+            <label className="ad-title">Hökümet sylaglary</label>
             <input
               type="text"
               className="ad-input"
@@ -294,7 +294,7 @@ export default function AddEmp() {
             />
           </div>{" "}
           <div className="ad-text-item">
-            <p className="ad-title">Dasary yurtda bolmagy</p>
+            <p className="ad-title">Daşary ýurtda bolmagy</p>
             <input
               type="text"
               {...register("another_country")}
@@ -302,7 +302,7 @@ export default function AddEmp() {
             />
           </div>{" "}
           <div className="ad-text-item">
-            <p className="ad-title">Turkmenistanyn Mejlisinin deputatymy:</p>
+            <p className="ad-title">Türkmenistanyň Mejlisiniň deputatymy:</p>
             <input type="text" {...register("deputy")} className="ad-input" />
           </div>
           <div className="ad-text-item">
@@ -324,7 +324,7 @@ export default function AddEmp() {
         </div>
         <div className="form-control">
           <button type="submit" className="new-emp-btn">
-            Gosmak
+            Ýatda Saklamak
           </button>
         </div>
       </form>{" "}

@@ -25,12 +25,15 @@ const SignIn = ({ settoken }) => {
         email: fromData.email,
         password: fromData.password,
       });
-
+      if (data.session === null) {
+        alert("Parol we Email ýalňyş ");
+      } else {
+        settoken(data);
+        navigate("/emps");
+        console.log(data);
+        console.log(error);
+      }
       // alert("you are signded the WEB SITE");
-      settoken(data);
-      navigate("/emps");
-      console.log(data);
-      console.log(error);
     } catch (error) {
       alert("error");
       console.log(error);
@@ -89,13 +92,13 @@ const SignIn = ({ settoken }) => {
             />{" "}
             <input
               name="password"
-              placeholder="Acar soz"
+              placeholder="Acar söz"
               className="gozleg"
               onChange={handleChange}
             />
             <button type="sumbit" className="giris-btn">
               {" "}
-              Girmek
+              Içeri Girmek
             </button>
           </form>
         </div>
