@@ -26,6 +26,7 @@ a {
   border: 1px solid #02c95c;
 }
 .search-btn {
+  background-color: transparent;
   border: none;
   position: absolute;
   left: 25.8%;
@@ -431,12 +432,13 @@ input::-webkit-inner-spin-button {
     left: 87.8%;
   }
   .ant-space-item {
-    width: 162px;
+    width: 315px;
+    margin-bottom: 16px;
   }
   .data-pic {
     margin-left: 10px;
     width: 46%;
-    margin-top: 16px;
+    margin-top: 0px;
   }
   .data-pic2 {
     width: 46%;
