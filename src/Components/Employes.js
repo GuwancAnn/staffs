@@ -111,9 +111,6 @@ export default function Employes() {
     console.log(searchText);
     console.log(e.target.value);
 
-    // if (searc == "") {
-    //   console.log(searchText);
-    // } else {
     const { data, error } = await supabase
       .from("staffs")
       .select(`*,professions(*),departments(*)`)
@@ -135,9 +132,8 @@ export default function Employes() {
   //setPositions(staffs.positions);
   console.log(staffs);
   const navigate = useNavigate();
-  const addEmp = (props) => {
+  const addEmp = () => {
     navigate("/addEmp");
-    console.log(props);
   };
 
   return (

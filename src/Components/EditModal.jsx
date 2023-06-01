@@ -16,7 +16,7 @@ const EditModal = ({
   name,
   setstaffs,
   profession,
-  setDepartments,
+  phone,
   department,
   professions,
   birthday,
@@ -478,6 +478,14 @@ const EditModal = ({
                     type="text"
                     className="ad-input"
                     {...register("prev_places", { value: prev })}
+                  />
+                </div>
+                <div className="ad-text-item">
+                  <p className="ad-title">Telefon Belgisi</p>
+                  <input
+                    type="number"
+                    className="ad-input"
+                    {...register("phone_number", { value: phone })}
                   />
                 </div>
               </div>

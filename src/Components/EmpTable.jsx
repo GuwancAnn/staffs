@@ -26,16 +26,16 @@ function EmpTable({
     today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
   dayjs().format("YYYY-MM-DD");
 
-  const deteleBtn = async (id) => {
-    const staffID = staffs.filter((staff) => staff.id !== id);
-    const { error } = await supabase.from("staffs").delete().eq("id", id);
-    console.log(id);
+  // const deteleBtn = async (id) => {
+  //   const staffID = staffs.filter((staff) => staff.id !== id);
+  //   const { error } = await supabase.from("staffs").delete().eq("id", id);
+  //   console.log(id);
 
-    if (error) {
-      console.log(error);
-    }
-    setstaffs(staffID);
-  };
+  //   if (error) {
+  //     console.log(error);
+  //   }
+  //   setstaffs(staffID);
+  // };
 
   return (
     <div>
@@ -46,8 +46,12 @@ function EmpTable({
               <th className="tb-head-item-name">
                 <p className="center-title-item setting">Ady familiyasy</p>
               </th>
-              <th className="tb-head-item "> Işleýän Bölümi</th>
-              <th className="tb-head-item ">Wezipesi</th>
+              <th className="tb-head-item ">
+                <p className="center-title-item setting"> Işleýän Bölümi</p>
+              </th>
+              <th className="tb-head-item ">
+                <p className="center-title-item setting">Wezipesi</p>
+              </th>
               <th className="tb-head-item ">
                 <p className="center-title-item setting">Doglan Senesi</p>
               </th>
@@ -115,6 +119,7 @@ function EmpTable({
                           setDepartments={setDepartments}
                           departments={departments}
                           prev={item.prev_places}
+                          phone={item.phone_number}
                         ></EditModal>
                       </div>
                     </td>

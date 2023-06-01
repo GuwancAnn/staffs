@@ -13,12 +13,12 @@ a {
   margin: 0 auto;
 }
 .input-filter {
-  padding: 18px 24px;
+  padding: 15px 24px;
 
   width: 326px;
 
   background: #eeeeee;
-  border-radius: 24px;
+  border-radius: 12px;
   border: 1px solid #eeeeee;
   font-size: 18px;
 }
@@ -60,7 +60,7 @@ input::placeholder {
   padding: 15px 18px 15px 18px;
   justify-content: space-between;
   height: 49px;
-  width: 179px !important;
+  width: 179px;
   border: 1px solid #9998a5;
   margin-left: 10px;
   border-radius: 12px;
@@ -98,7 +98,7 @@ input::placeholder {
   justify-content: space-between;
   height: 49px;
   margin-left: 24px;
-  width: 25%;
+  width: 50%;
 
   border: 1px solid #9998a5;
   border-radius: 12px;
@@ -108,7 +108,7 @@ input::placeholder {
   justify-content: space-between;
 
   height: 49px;
-  width: 25%;
+  width: 50%;
   border: 1px solid #9998a5;
   border-radius: 12px;
 }
@@ -177,7 +177,7 @@ input::placeholder {
   display: flex;
   width: 80%;
   margin: 0 auto;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
 }
@@ -188,19 +188,19 @@ input::placeholder {
   width: 40%;
 }
 .ad-input {
-  width: 50%;
+  width: 48%;
   height: 32px;
   border-radius: 20px;
-  border: none;
+  border: 1px solid transparent;
   background-color: #eeeeee;
   padding: 8px 20px;
   font-size: 16px;
 }
 .text-area {
-  width: 50%;
+  width: 48%;
   height: 120px;
   border-radius: 20px;
-  border: none;
+  border: 1px solid transparent;
   background-color: #eeeeee;
   padding: 8px 20px;
 }
@@ -228,23 +228,6 @@ input::placeholder {
   margin-bottom: 32px;
 }
 
-.ad-input {
-  width: 50%;
-  height: 32px;
-  border-radius: 20px;
-  border: 1px solid transparent;
-  background-color: #eeeeee;
-  padding: 8px 20px;
-}
-.text-area {
-  width: 50%;
-  height: 120px;
-  border-radius: 20px;
-  border: 1px solid #eeeeee;
-  background-color: #eeeeee;
-  padding: 8px 20px;
-  font-size: 16px;
-}
 .text-area:focus {
   outline: none;
 }
@@ -261,6 +244,27 @@ input::placeholder {
   border-radius: 5px;
   width: 25%;
   margin-left: 5%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.error-message {
+  font-size: 14px;
+  color: red;
+  margin: 0;
+  width: 6%;
+}
+.ad-item-flex {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.date-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 52%;
 }
 .newdep-input {
   width: 70%;
@@ -305,10 +309,111 @@ input::placeholder {
     max-width: 1200px;
     padding: 32px 27px 0px 27px;
   }
+  .input-filter {
+    width: 25%;
+  }
+  .search-btn {
+    left: 22.8%;
+  }
+  .ant-space-item {
+    width: 166px;
+  }
+  .data-pic {
+    width: 45%;
+  }
+  .data-pic2 {
+    width: 45%;
+  }
 }
 @media screen and (max-width: 1124px) {
   .container1 {
     max-width: 1000px;
     padding: 32px 22px 0px 22px;
+  }
+  /* .input-filter {
+    width: 23%;
+  } */
+  .search-btn {
+    left: 19.8%;
+  }
+  /* .ant-space-item {
+    width: 146px;
+  } */
+}
+@media screen and (max-width: 994px) {
+  .container1 {
+    max-width: 948px;
+    padding: 32px 22px 0px 22px;
+  }
+  .search-btn {
+    left: 18.8%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container1 {
+    max-width: 548px;
+    padding: 16px 12px 0px 12px;
+  }
+  .ant-space-item {
+    width: 163px;
+  }
+  .top-filter {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .input-filter {
+    margin-bottom: 6px;
+  }
+  .data-pic {
+    width: 50%;
+    margin-left: 0px;
+  }
+  .add-btn {
+    width: 13%;
+    margin-left: 13px;
+  }
+  .clear-btn {
+    width: 13%;
+  }
+  .search-btn {
+    left: 26.8%;
+  }
+  .search-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (max-width: 434px) {
+  .container1 {
+    max-width: 394px;
+    padding: 16px 12px 0px 12px;
+  }
+  .input-filter {
+    width: 81%;
+    margin-left: 10px;
+    margin-bottom: 16px;
+  }
+  .search-btn {
+    left: 87.8%;
+  }
+  .ant-space-item {
+    width: 166px;
+  }
+  .data-pic {
+    margin-left: 10px;
+    width: 46%;
+    margin-top: 16px;
+  }
+  .data-pic2 {
+    width: 46%;
+  }
+  .add-btn {
+    width: 20%;
+    margin-top: 16px;
+    margin-left: 13px;
+  }
+  .clear-btn {
+    width: 20%;
+    margin-top: 16px;
   }
 }

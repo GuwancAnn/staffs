@@ -120,6 +120,9 @@
   box-shadow: none;
   outline: 0;
 }
+.logo {
+  width: 150px;
+}
 .tb-tr:hover {
   background-color: #eeeeee;
   cursor: pointer;
@@ -156,6 +159,17 @@ td {
   padding-top: 2px;
 }
 .delete-btn-icon:hover {
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #72be3d !important;
+}
+.back-btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-left: 28px;
+  padding-top: 2px;
+}
+.back-btn:hover {
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid #72be3d !important;
@@ -249,7 +263,7 @@ td {
 }
 .ant-select-single {
   font-size: 14px;
-  width: 55% !important;
+  width: 52% !important;
 }
 .ant-modal-footer {
   display: none;
@@ -272,4 +286,12 @@ td {
 .edit-footer {
   display: flex;
   justify-content: flex-end;
+}
+@media screen and (max-width: 1124px) {
+  .delete-btn-icon {
+    margin-right: 10px;
+  }
+  .edit-btn {
+    margin-left: 10px;
+  }
 }
