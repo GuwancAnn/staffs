@@ -40,6 +40,7 @@ export default function AddEmp() {
 
     setProfile(imagesArr);
     console.log(profile);
+    console.log(selectedPhoto.name);
     const upladReady = `${uuidv4()}-${selectedPhoto.name}`;
     console.log(upladReady);
     const { data: images, error } = await supabase.storage
@@ -87,11 +88,11 @@ export default function AddEmp() {
       alert("Ahli setirleri dolduryň");
     } else {
       reset();
-      setNewBirthday();
-      setNewDepId();
-      setNewProID();
+      // setNewBirthday("");
+      //  setNewDepId();
+      // setNewProID();
       setProfile();
-      setNewStartedDay();
+      // setNewStartedDay("");
     }
   };
 

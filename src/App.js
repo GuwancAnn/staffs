@@ -5,6 +5,7 @@ import SignUp from "./Components/SignUp";
 import AddEmp from "./AddEmp";
 import React, { useEffect, useState } from "react";
 import Employes from "./Components/Employes";
+import Static from "./Components/Static";
 
 const App = () => {
   const [token, settoken] = useState(false);
@@ -23,7 +24,7 @@ const App = () => {
     <div>
       <Routes>
         {" "}
-        <Route path="/" element={<SignUp></SignUp>}></Route>
+        <Route path="/" element={<SignUp settoken={settoken}></SignUp>}></Route>
         <Route path="/singin" element={<SignIn settoken={settoken} />}></Route>
         {token ? (
           <Route path="/emps" element={<Employes />}></Route>
@@ -31,6 +32,7 @@ const App = () => {
           "you can't see page"
         )}
         <Route path="/addemp" element={<AddEmp />}></Route>
+        <Route path="/st" element={<Static />}></Route>
       </Routes>
     </div>
   );

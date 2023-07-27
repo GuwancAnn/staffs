@@ -61,7 +61,7 @@ const DepSelect = ({ setNewDepId }) => {
     }
 
     setItems(data);
-    console.log(items);
+    // console.log(items);
   };
 
   return (
@@ -70,7 +70,7 @@ const DepSelect = ({ setNewDepId }) => {
       style={{
         width: "54%",
       }}
-      placeholder="Kafedra saýlaň"
+      placeholder="Bölim saýlaň"
       dropdownRender={(menu) => (
         <>
           {menu}
@@ -94,7 +94,7 @@ const DepSelect = ({ setNewDepId }) => {
           >
             Add item
           </Button>
-          {console.log(items)}
+          {/* {console.log(items)} */}
         </>
       )}
       options={items.map((item) => ({

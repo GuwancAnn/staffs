@@ -32,6 +32,9 @@
   margin-left: 16px;
   /* margin-right: 15px; */
 }
+.recharts-wrapper {
+  margin: 5em auto;
+}
 
 .setting {
   font-size: 16px;
@@ -183,12 +186,7 @@ td {
 .ant-btn {
   padding: 5px;
 }
-/* button:hover {
-  border: 1px solid #72be3d;
-  background-color: white;
-  cursor: pointer;
-  border-radius: 5px;
-} */
+
 .drop-btn {
   border: 1px solid transparent;
   background-color: transparent;
@@ -287,6 +285,109 @@ td {
   display: flex;
   justify-content: flex-end;
 }
+.number {
+  margin-bottom: 2px;
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+.num-text {
+  margin-bottom: 4px;
+  margin-top: 0;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.numbers-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+.numbers-st {
+  color: #ffffff;
+  background-color: #03602b;
+  width: 80%;
+  margin: 0 auto;
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+.st-flex-col {
+  display: flex;
+  margin-bottom: 32px;
+  /* flex-direction: column; */
+}
+.f-logo {
+  width: 100px;
+  margin-right: 12px;
+}
+#tsparticles {
+  height: 80%;
+  width: 98%;
+  position: absolute;
+}
+.f-flex {
+  display: flex;
+  align-items: center;
+}
+.text-f-logo {
+  color: #006600;
+}
+.about-flex {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  justify-content: space-between;
+}
+.create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-us {
+  margin-top: 32px;
+}
+.circle {
+  border: 3px solid #79ac81;
+
+  width: 80px;
+  height: 80px;
+  /* padding: 11px 5px 5px 25px; */
+  border-radius: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.f-title {
+  font-size: 20px;
+  margin-bottom: 0px;
+  color: #006600;
+}
+.f-subtitle {
+  color: #2e9b4b;
+  font-size: 18px;
+}
+.adress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.phone-f {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* canvas {
+  width: 50% !important;
+} */
 @media screen and (max-width: 1124px) {
   .delete-btn-icon {
     margin-right: 10px;

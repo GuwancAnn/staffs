@@ -36,7 +36,19 @@ function EmpTable({
   //   }
   //   setstaffs(staffID);
   // };
-
+  // const countItem = async (id) => {
+  //   const { data, error } = await supabase
+  //     .from("staffs")
+  //     .select("*", { count: "exact" })
+  //     .eq("professions_id", `${id}`);
+  //   if (data) {
+  //     console.log(data.length);
+  //     if (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  // };
+  // countItem();
   return (
     <div>
       <>
@@ -78,7 +90,7 @@ function EmpTable({
                         <p className="">{item.name}</p>
                       </div>
                     </td>
-                    <td> {item.departments.dep_name} kaferdasy</td>
+                    <td> {item.departments.dep_name} </td>
 
                     <td>{item.professions.title} </td>
                     <td>

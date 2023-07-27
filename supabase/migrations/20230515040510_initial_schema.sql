@@ -12,5 +12,8 @@ create table
     another_country text null,
     deputy text null,
     party_member text null,
+    phone_number bigint null,
+    profile_photo text null,
+    prev_places text null,
     constraint staffs_pkey primary key (id)
   ) tablespace pg_default;

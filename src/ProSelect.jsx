@@ -10,7 +10,7 @@ const ProSelect = ({ setNewProID }) => {
   const [name, setName] = useState("");
   const inputRef = useRef(null);
   useEffect(() => {
-    const departmentData = async () => {
+    const professionsData = async () => {
       let { data: professions, error } = await supabase
         .from("professions")
         .select("*");
@@ -25,7 +25,7 @@ const ProSelect = ({ setNewProID }) => {
       setItems(professions);
       console.log(items);
     };
-    departmentData();
+    professionsData();
   }, []);
 
   const onNameChange = (event) => {
@@ -33,13 +33,12 @@ const ProSelect = ({ setNewProID }) => {
   };
   const onSelChange = (id) => {
     console.log(id);
-
+    console.log(name);
     setNewProID(id);
   };
   const addItem = async (e, id) => {
     e.preventDefault();
 
-    setName("");
     setTimeout(() => {
       inputRef.current?.focus();
     }, 0);
@@ -57,9 +56,9 @@ const ProSelect = ({ setNewProID }) => {
     if (error) {
       console.log(error);
     }
-
+    setName("");
     setItems(data);
-    console.log(items);
+    // console.log(items);
   };
 
   return (
@@ -92,7 +91,6 @@ const ProSelect = ({ setNewProID }) => {
           >
             Add item
           </Button>
-          {console.log(items)}
         </>
       )}
       options={items.map((item) => ({

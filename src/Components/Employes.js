@@ -14,6 +14,7 @@ export default function Employes() {
   const [professions, setProfessions] = useState([]);
   const [departments, setDepartments] = useState([]);
   const [searchText, setSearchText] = useState("");
+
   useEffect(() => {
     const staffsData = async () => {
       let { data, error } = await supabase
@@ -135,13 +136,52 @@ export default function Employes() {
   const addEmp = () => {
     navigate("/addEmp");
   };
+  const countItem = async () => {
+    // const { data, error, count } = await supabase.from("professions").select(`
+    //   *,
+    //   staffs (
+    //     *,professions_id(count)
+    //   )
+    // `);
+    // .from("professions")
+    // .select(`professions.*, count(staffs.id) as staffs_count`)
+    // .leftJoin("staffs", "proffessions.id", "staffs.professions_id")
+    // .groupBy("professions.id");
+    //.select(`professions.id`)
+    // .leftJoin("staffs", "staffs.professions_id", "staffs.id");
+    // .in("professions_id", [1, 3]);
+    // if (data) {
+    //   // console.log(data);
+    //   console.log(data);
+    navigate("/st");
+    //   setProCount(data)
+    //   if (error) {
+    //     console.log(error);
+    //   }
+    // }
+  };
 
   return (
     <div className="container1">
       <div className="top-filter">
+        <button onClick={() => countItem()} className="info-btn">
+          {" "}
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.6666 5.5L16.7658 7.59917L12.2924 12.0725L8.62575 8.40583L1.83325 15.2075L3.12575 16.5L8.62575 11L12.2924 14.6667L18.0674 8.90083L20.1666 11V5.5H14.6666Z"
+              fill="#34A853"
+            />
+          </svg>
+        </button>
         <input
           type="text"
-          placeholder="Gozleg..."
+          placeholder="Gözleg..."
           value={searchText}
           className="input-filter"
           onChange={(e) => setSearchText(e.target.value)}

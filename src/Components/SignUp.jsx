@@ -2,8 +2,8 @@ import "../App.css";
 import supabase from "./client";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-const SignUp = () => {
+import tdeiLogo from "../svgphoto/tdei.jpg";
+const SignUp = ({ settoken }) => {
   const navigate = useNavigate();
   const [fromData, setFromData] = useState({
     userName: "",
@@ -32,8 +32,7 @@ const SignUp = () => {
       if (data.session !== null) {
         navigate("/emps");
         console.log(data);
-
-        console.log(error);
+        settoken(data.session);
       }
     } catch (error) {
       alert("error");
@@ -45,27 +44,7 @@ const SignUp = () => {
     <div className="main">
       <div className="container">
         <div className="first-logo">
-          <svg
-            width="72"
-            height="73"
-            viewBox="0 0 72 73"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              y="0.0957031"
-              width="72"
-              height="72.1076"
-              rx="16"
-              fill="#00EE6D"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M50.8284 33.3167C52.3905 34.8812 52.3905 37.4176 50.8284 38.9821L38.8284 51C37.2663 52.5644 34.7337 52.5644 33.1716 51L21.1716 38.9821C19.6095 37.4176 19.6095 34.8812 21.1716 33.3167L33.1716 21.2988C34.7337 19.7344 37.2663 19.7344 38.8284 21.2988L50.8284 33.3167ZM36 29.7968L29.6569 36.1494L36 42.502L42.3431 36.1494L36 29.7968Z"
-              fill="white"
-            />
-          </svg>
+          <img src={tdeiLogo} alt="tdei" className="logo" />
         </div>
         <h1 className="header-text">Hoş geldiniz</h1>
         <p className="sm-text">Agza bolmak üçin dolduryň</p>
@@ -94,7 +73,7 @@ const SignUp = () => {
             <input
               name="password"
               id=""
-              placeholder="Acar soz"
+              placeholder="Açar soz"
               className="gozleg"
               onChange={handleChange}
             />

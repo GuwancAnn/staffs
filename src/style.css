@@ -29,7 +29,7 @@ a {
   background-color: transparent;
   border: none;
   position: absolute;
-  left: 25.8%;
+  left: 28.8%;
   top: 16px;
 }
 
@@ -128,6 +128,20 @@ input::placeholder {
   border-radius: 12px;
   width: 54px;
   margin-left: 10px;
+}
+.info-btn {
+  background: transparent;
+  border: 1px solid #34a853;
+  height: 49px;
+  border-radius: 12px;
+  width: 54px;
+  margin-right: 10px;
+}
+.info-btn:hover {
+  cursor: pointer;
+  border: 1px solid #02c95c;
+  border-radius: 12px;
+  background: F4F4F4;
 }
 .add-btn:hover {
   cursor: pointer;
@@ -304,6 +318,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
   margin-right: 10px;
+  font-size: 16px;
 }
 @media screen and (max-width: 1266px) {
   .container1 {
@@ -314,7 +329,7 @@ input::-webkit-inner-spin-button {
     width: 25%;
   }
   .search-btn {
-    left: 22.8%;
+    left: 21.8%;
   }
   .ant-space-item {
     width: 166px;
@@ -335,7 +350,7 @@ input::-webkit-inner-spin-button {
     width: 23%;
   } */
   .search-btn {
-    left: 19.8%;
+    left: 18.8%;
   }
   /* .ant-space-item {
     width: 146px;
@@ -347,7 +362,7 @@ input::-webkit-inner-spin-button {
     padding: 32px 22px 0px 22px;
   }
   .search-btn {
-    left: 18.8%;
+    left: 19.8%;
   }
 }
 @media screen and (max-width: 576px) {
@@ -377,7 +392,7 @@ input::-webkit-inner-spin-button {
     width: 13%;
   }
   .search-btn {
-    left: 26.8%;
+    left: 25.8%;
   }
   .search-icon {
     width: 18px;
@@ -395,7 +410,7 @@ input::-webkit-inner-spin-button {
     margin-bottom: 16px;
   }
   .search-btn {
-    left: 87.8%;
+    left: 86.8%;
   }
   .ant-space-item {
     width: 166px;
